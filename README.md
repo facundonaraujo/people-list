@@ -1,27 +1,34 @@
-# PeopleList
+# Personas List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+# Objetivo
 
-## Development server
+El objetivo del presente trabajo es mostrar una tabla con datos de personas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# **Especificación**
 
-## Code scaffolding
+Crear una webapp que obtiene datos de 16 personas a partir de la API y mostrarlo como una galería.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La galería debe mostrar solo la foto y al hacer click se debe mostrar un modal con el detalle completo de la persona.
+
+La página debe ser responsive.
+
+# Bonus track
+
+Poder alternar con un botón entre formato Galería y Tabla.
+
+En el caso de la tabla, se van a mostrar 5 campos a elección.
+
+# Anexo
+
+## **Herramientas**
+
+- **API:** [https://randomuser.me/](https://randomuser.me/)
+- **Framework:** Angular 9 o superior
+
+## Running
+
+Run **npm start** for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run **ng build** to build the project. The build artifacts will be stored in the **dist/** directory. Use the **--prod** flag for a production build.
