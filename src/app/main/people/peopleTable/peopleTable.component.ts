@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PeopleService } from '../../people.service';
+import { ModalComponent } from '../modal/modal.component';
 import { People } from '../models/people.model';
 
 @Component({
@@ -13,6 +14,7 @@ export class PeopleTableComponent implements OnInit {
   people: People[] = [];
   person: People | undefined;
   cargando: boolean = true;
+  @ViewChild(ModalComponent, { static: false }) ModalComponent: ModalComponent | undefined;
 
   constructor(
     public peopleService: PeopleService,
@@ -20,43 +22,24 @@ export class PeopleTableComponent implements OnInit {
 
   ngOnInit() {
     this.getPeople();
-
-    const overlay = document.querySelector('.modal-overlay')
-    overlay?.addEventListener('click', this.toggleModal)
-    
-    var closemodal = document.querySelectorAll('.modal-close')
-    for (var i = 0; i < closemodal.length; i++) {
-      closemodal[i].addEventListener('click', this.toggleModal)
-    }
-    
-    document.onkeydown = (evt) => {
-      evt = evt || window.event
-      var isEscape = false
-      if ("key" in evt) {
-        isEscape = (evt.key === "Escape" || evt.key === "Esc")
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-        this.toggleModal()
-      }
-    };
   }
 
-  getPeople(){
+  getPeople() {
     this.peopleService.getPeople(this.pagenumber)
-    .subscribe({
-      next: (resp: any) => {
-        this.people = resp.results;
-        this.cargando = false;
-      },
-      error: (err: any) => {
-        console.log('err :>> ', err);
-      }
-    });
+      .subscribe({
+        next: (resp: any) => {
+          this.people = resp.results;
+          this.cargando = false;
+        },
+        error: (err: any) => {
+          console.log('err :>> ', err);
+        }
+      });
   }
 
-  pageChanged(page: any){
+  pageChanged(page: any) {
     this.pagenumber = page,
-    this.getPeople();
+      this.getPeople();
     window.scroll({
       top: 0,
       left: 0,
@@ -64,16 +47,8 @@ export class PeopleTableComponent implements OnInit {
     });
   }
 
-  toggleModal() {
-    const body = document.querySelector('body')
-    const modal = document.querySelector('.modal')
-    modal?.classList.toggle('opacity-0')
-    modal?.classList.toggle('pointer-events-none')
-    body?.classList.toggle('modal-active')
-  }
-
-  openModal(person: People){
+  openModal(person: People) {
     this.person = person;
-    this.toggleModal();
+    this.ModalComponent?.toggleModal();
   }
 }

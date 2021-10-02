@@ -7,6 +7,7 @@ import { PeopleTableComponent } from './peopleTable/peopleTable.component';
 import { PeopleGridComponent } from './peopleGrid/peopleGrid.component';
 import { PeopleService } from '../people.service';
 import { RouterModule, Routes } from '@angular/router';
+import { ModalComponent } from './modal/modal.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
   declarations: [
     PeopleComponent,
     PeopleTableComponent,
-    PeopleGridComponent
+    PeopleGridComponent,
+    ModalComponent
   ],
   providers: [PeopleService],
 })
