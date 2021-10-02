@@ -22,8 +22,11 @@ En el caso de la tabla, se van a mostrar 5 campos a elección.
 
 ## **Herramientas**
 
-- **API:** [https://randomuser.me/](https://randomuser.me/)
-- **Framework:** Angular 9 o superior
+- **FRONTEND:** [https://randomuser.me/](https://randomuser.me/)
+
+## **Links**
+
+- **API:** [https://facundonaraujo.github.io/people-list/](https://facundonaraujo.github.io/people-list/)
 
 ## **Links**
 
