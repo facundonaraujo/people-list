@@ -28,4 +28,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: people-list-page
-        FOLDER: public
+        FOLDER: dist/people-list
