@@ -25,6 +25,9 @@ En el caso de la tabla, se van a mostrar 5 campos a elección.
 - **API:** [https://randomuser.me/](https://randomuser.me/)
 - **Framework:** Angular 9 o superior
 
+## **Links**
+
+- **FRONTEND:** [https://facundonaraujo.github.io/people-list/](https://facundonaraujo.github.io/people-list/)
 ## Running
 
 Run **npm start** for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
