@@ -15,7 +15,7 @@ export class PeopleService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    const url = environment.urlServices + `/?page=${pageNumber}&results=12&seed=abc&nat=us,es`;
+    const url = environment.urlServices + `/?page=${pageNumber}&results=16&seed=abc&nat=us,es`;
     return this.http.get(url, { headers });
   }
 
